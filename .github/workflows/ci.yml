@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    uses: YOUR_USERNAME/shared_workflows_demo/.github/workflows/simple-ci.yml@main
+    uses: SudarshanHV/shared_workflows_demo/.github/workflows/simple-ci.yml@main
     with:
       app-name: "Hello Frontend"
       test-command: "npm test"
@@ -16,7 +16,7 @@ jobs:
   deploy:
     needs: test
     if: github.ref == 'refs/heads/main'
-    uses: YOUR_USERNAME/shared_workflows_demo/.github/workflows/deploy.yml@main
+    uses: SudarshanHV/shared_workflows_demo/.github/workflows/deploy.yml@main
     with:
       app-name: "sw-hello-frontend-demo"
       environment: "production"
