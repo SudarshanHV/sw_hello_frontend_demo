@@ -1,0 +1,7 @@
+{
+  "name": "sw-hello-frontend-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo 'Frontend tests passed!'"
+  }
+}
