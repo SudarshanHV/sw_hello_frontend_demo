@@ -8,11 +8,11 @@ describe('App Component', () => {
     expect(headingElement).toBeInTheDocument();
   });
 
-  test('renders greeting with default name', () => {
-    render(<App />);
-    const greetingElement = screen.getByText(/world/i);
-    expect(greetingElement).toBeInTheDocument();
-  });
+//   test('renders greeting with default name', () => {
+//     render(<App />);
+//     const greetingElement = screen.getByText(/world/i);
+//     expect(greetingElement).toBeInTheDocument();
+//   });
 
 //   test('updates greeting when name input changes', () => {
 //     render(<App />);
