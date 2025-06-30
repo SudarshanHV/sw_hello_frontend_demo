@@ -1,0 +1,105 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-header h1 {
+  margin-bottom: 30px;
+  color: #61dafb;
+}
+
+.greeting {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #3a4248;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.greeting h2 {
+  color: #61dafb;
+  margin-bottom: 10px;
+}
+
+.input-section {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-section label {
+  font-weight: bold;
+}
+
+.input-section input {
+  padding: 8px 12px;
+  border: 1px solid #61dafb;
+  border-radius: 4px;
+  font-size: 16px;
+  max-width: 200px;
+}
+
+.counter {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #3a4248;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.counter h3 {
+  color: #61dafb;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.counter-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.counter-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #61dafb;
+  color: #282c34;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.counter-buttons button:hover:not(:disabled) {
+  background-color: #4fa8c5;
+}
+
+.counter-buttons button:disabled {
+  background-color: #666;
+  color: #999;
+  cursor: not-allowed;
+}
+
+footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #61dafb;
+}
+
+footer p {
+  color: #ccc;
+  font-size: 14px;
+}
