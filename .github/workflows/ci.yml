@@ -7,11 +7,20 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
-    uses: SudarshanHV/shared_workflows_demo/.github/workflows/simple-ci.yml@main
+  test-with-coverage:
+    uses: SudarshanHV/shared_workflows_demo/.github/workflows/react-coverage.yml@main
     with:
       app-name: "Hello Frontend"
       test-command: "npm test"
+  
+  coverage-upload:
+    uses: SudarshanHV/shared_workflows_demo/.github/workflows/sonarqube.yml@main
+    with:
+      sonar-project-key: SudarshanHV_sw_hello_frontend_demo
+      sonar-host-url: https://sonarcloud.io
+      sonar-organization: sudarshanhv
+      enable-coverage: true
+    secrets: inherit
 
   deploy:
     needs: test
@@ -19,4 +28,4 @@ jobs:
     uses: SudarshanHV/shared_workflows_demo/.github/workflows/deploy.yml@main
     with:
       app-name: "sw-hello-frontend-demo"
-      environment: "production"
+      environment: "staging"
