@@ -1,0 +1,14 @@
+jobs:
+  frontend-ci:
+    uses: your-org/your-repo/.github/workflows/frontend-ci-reusable.yml@main
+    with:
+      app-name: "Hello Frontend"
+      test-command: "npm test"
+      sonar-project-key: SudarshanHV_sw_hello_frontend_demo
+      sonar-host-url: https://sonarcloud.io
+      sonar-organization: sudarshanhv
+      deploy-environment: "staging"
+      run-tests: true
+      run-coverage-upload: true
+      run-deploy: true
+    secrets: inherit
